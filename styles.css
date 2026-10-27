@@ -375,7 +375,7 @@ img {
   margin-top: 1.6rem;
 }
 
-.contact-details div {
+.contact-details > div {
   padding: 1rem 0;
   border-bottom: 1px solid var(--line);
 }
@@ -392,6 +392,49 @@ img {
 .contact-details a {
   font-size: 1rem;
   font-weight: 700;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #000;
+  border-radius: 8px;
+  transition: color 0.2s ease;
+}
+
+.social-link svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.social-link:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 2px;
+}
+
+.social-link-linkedin:hover,
+.social-link-linkedin:focus-visible {
+  color: #0a66c2;
+}
+
+.instagram-color {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.social-link-instagram:hover .instagram-color,
+.social-link-instagram:focus-visible .instagram-color {
+  opacity: 1;
 }
 
 .contact-form {
